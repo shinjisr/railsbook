@@ -7,6 +7,6 @@ else
 	puts "Hello" + " " + name + '!'
 puts "What is your age?"
 age = gets.to_i
-puts "Sorry, adults only, go home now." if age < 18 
+puts "Sorry, adults only." if age < 18 
 puts "<<allowed>>" if age >= 18
 end
