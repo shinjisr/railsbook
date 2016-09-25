@@ -1,4 +1,4 @@
-puts 'There is t2.1'
+puts 'This is t2.1'
 puts 'What is your name?'
 name = gets.strip.capitalize
 if name == ('Aa' or 'Bb' or 'Cc') then
