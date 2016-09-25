@@ -1,6 +1,6 @@
 loop do 
 	puts "Feed me some food!"
-	food = gets.capitalize
+	food = gets.strip
 	if food == "Pizza"
 		puts "Yum, I love pizza!" 
 	else
