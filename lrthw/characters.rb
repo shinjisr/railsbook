@@ -38,6 +38,7 @@ tilde(answer)
 # <> = angle brackets
 # + = plus (ADDING)
 # - = minus (SUBTRACTING)(hyphen)
+# | = delimiter
 # / = slash (DIVIDING)
 # _ = underscore / underline
 # = = equal (nameing a value)
