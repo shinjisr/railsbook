@@ -35,4 +35,6 @@ puts "We'd have #{beans} beans, #{jars} jars, #{crates} crates."
 start_point = start_point / 10
 puts "We can also do that this way:"
 puts "We'd have %s beans, %d jars, and %d crates." % secret_formula(start_point)
-# what is '%s', and '%d' do for?
+
+# a = secret_formula(start_point)
+# puts "#{a}"
