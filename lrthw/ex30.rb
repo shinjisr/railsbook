@@ -3,7 +3,7 @@ cars = 40
 trucks = 15
 
 
-if cars > people 
+if cars > people
   puts "We should take the cars."
 elsif cars < people
   puts "We should not take the cars."

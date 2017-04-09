@@ -2,7 +2,7 @@ module Ex25
 
   # This function will break up words for us.
   def Ex25.break_words(stuff)
-    words = stuff.split(" ")
+    words = stuff.split(' ')
     return words
   end
 
@@ -17,7 +17,7 @@ module Ex25
     puts word
   end
 
-  # Print the last word after popping it off.
+  # Prints the last word after popping it off.
   def Ex25.print_last_word(words)
     word = words.pop
     puts word
