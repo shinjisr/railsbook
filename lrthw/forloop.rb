@@ -19,22 +19,22 @@ fruits = ['apples', 'oranges', 'pears', 'apricots']
 
 # # this frist kind of for-loop goes through a list
 # # in a more traditional style found in other languages
-# for number in the_count
-# 	puts "This is count #{number}"
-# end
+for number in the_count
+	puts "This is count #{number}"
+end
 
-# the_count.each do |number|
-# 	puts "This is typical count #{number}"
-# end
+the_count.each do |number|
+	puts "This is typical count #{number}"
+end
 
-# the_count.each {|i| puts "This is count-i #{i}"}
+the_count.each {|i| puts "This is count-i #{i}"}
 
-# # same as above, but in a more Ruby style
-# # this and the next one are the preferred
-# # way Ruby for-loop are written
-# fruits.each do |fruit|
-# 	puts "A fruit of type #{fruit}"
-# end
+# same as above, but in a more Ruby style
+# this and the next one are the preferred
+# way Ruby for-loop are written
+fruits.each do |fruit|
+	puts "A fruit of type #{fruit}"
+end
 
 
 # cool trick below:
@@ -50,12 +50,12 @@ end
 # # we can also built lists, first start with an empty one
 # elements = []
 
-# # then use the range operator to do 0 to 5 counts
-# (0..5).each do |i|
-# 	puts "adding #{i} to the list."
-# 	# pushes the i variable on the *end* of the list
-# 	elements.push(i)
-# end
+# then use the range operator to do 0 to 5 counts
+(0..5).each do |i|
+	puts "adding #{i} to the list."
+	# pushes the i variable on the *end* of the list
+	elements.push(i)
+end
 
 # # now we can print them out too
 # elements.each {|i| puts "Element was #{i}" }
