@@ -11,7 +11,7 @@ def iloop
 		puts "Numbers now: ", numbers
 		puts "At the buttom i is #{i}"
 	end
-	puts "The numbers: "
+	puts "The numbers in the end: "
 	numbers.each {|num| puts num }
 end
 
