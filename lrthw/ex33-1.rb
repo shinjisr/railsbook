@@ -2,14 +2,12 @@
 # y = 2
 
 
-def iloop(x, y)
-i = 0
-numbers = []
-	while i < x
+def iloop
+	numbers = []
+	(0..6).each do |i|
 		puts "At the top i is #{i}"
 		numbers.push(i)
 
-		i += y
 		puts "Numbers now: ", numbers
 		puts "At the buttom i is #{i}"
 	end
@@ -17,9 +15,7 @@ numbers = []
 	numbers.each {|num| puts num }
 end
 
-iloop(3, 1)
-
-
+iloop
 
 # remember you can write this 2 other ways?
 # puts "first way: .each"
