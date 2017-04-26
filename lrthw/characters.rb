@@ -43,6 +43,8 @@ tilde(answer)
 # _ = underscore / underline
 # = = equal (nameing a value)
 # == = equal(mathematical)
+# =~ = Ruby's basic pattern-matching operator
+# === =
 # < = less-than
 # > = greater-than
 # <= = less-than-equal
