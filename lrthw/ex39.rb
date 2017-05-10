@@ -1,3 +1,4 @@
+# hash
 # create a mapping of state to abbreviation
 states = {
   'Oregon' => 'OR',
@@ -57,8 +58,8 @@ puts '-' * 10
 state = states['Texas']
 
 if !state
-# or I can wirte in this way:
-# unless state
+  # or I can wirte in this way:
+  # unless state
   puts "Sorry, no Texas."
 end
 
@@ -66,12 +67,3 @@ end
 city = cities['TX']
 city ||= 'Does Not Exist'
 puts "The city for the state 'TX' is: #{city}"
-
-
-
-
-
-
-
-
-

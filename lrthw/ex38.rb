@@ -1,3 +1,4 @@
+# array:
 ten_things = "Apples Oranges Crows Telephone Light Sugar"
 puts ten_things
 puts "Wait there are not 10 things in that list. Let's fix it that"
