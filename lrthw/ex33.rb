@@ -13,7 +13,7 @@ end
 puts "The numbers: "
 
 # remember you can write this 2 other ways?
-# puts "first way: .each"
+puts "first way: .each"
 numbers.each {|num| puts num }
 
 # numbers.each do |num|
