@@ -7,7 +7,7 @@ class TestGame < Test::Unit::TestCase
     gold =Room.new("GoldRoom",
                    """This room has gold in it you can grab. There's a
                door to the north.""")
-    assert_equal(gold.name, "GoldRoom")
+    assert_equal(gold.name, "GoldRoom") # this line and the next has a little different in the order of elements from web site's demonstration.
     assert_equal(gold.paths, {})
   end
 
