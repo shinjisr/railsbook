@@ -1,4 +1,4 @@
-require "ex47/game.rb"
+require "gothonweb/map.rb"
 require "test/unit"
 
 class TestGame < Test::Unit::TestCase
