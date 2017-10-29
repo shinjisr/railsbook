@@ -1,71 +1,58 @@
 class Lexicon
+  @@dictionary = {
+    'direction' => ['north', 'south', 'east', 'west'],
+    'verb' => ['go', 'eat', 'kill', 'jump', 'run',
+      'walk'],
+    'stop' => ['the', 'in', 'of', 'to', 'a', 'is'],
+    'noun' => ['bear', 'princess', 'nose', 'castle', 'cake'],
+    'name' => ['snoopy', 'linus', 'lucy']
+  }
 
-  #begin
-  # def initialize()
-  #   @direction = direction
-  # end
+  def self.scan(text)
+    text_elements = text.split(' ')
+    result = []
 
-  # attr_reader :direction
+    text_elements.each do |text_element|
+      categorized = []
 
-  def self.scan(stuff)
-    words = stuff.split
-    directions = ['east', 'south', 'west', 'north']
-    verbs = ['go', 'stop', 'kill', 'eat']
-    stops = ['the', 'in', 'of']
-    nouns = ['bear', 'princess']
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    results = []
-    begin
-      words.each {|word|
-        # if word.class != String
-        #   puts "Not a good idea."
-        if directions.include?(word)
-          words.each {|word|
-            direction_word = ["direction", word]
-            results.push(direction_word)
-          }
-        elsif verbs.include?(word)
-          words.each {|word|
-            verb_word = ["verb", word]
-            results.push(verb_word)
-          }
-        elsif stops.include?(word)
-          words.each {|word|
-            stop_word = ["stop", word]
-            results.push(stop_word)
-          }
-        elsif nouns.include?(word)
-          words.each {|word|
-            noun_word = ["noun", word]
-            results.push(noun_word)
-          }
-        elsif word.class == Fixnum
-          words.each {|word|
-            number_word = ["number", word.to_i]
-            results.push(number_word)
-          }
-        else
-          errors = words - directions - verbs - nouns
-          errors.each {|word|
-            if word.class != Fixnum
-              error_word = ["error", word]
-              results.push(error_word)
-            end
-          }
+      # remove trailing zeros from numerical input
+      number = Lexicon.integer?(text_element)
+      # so we can write if-statement like this?!
+      if (number)
+        categorized = ['number', number]
+        result.push(categorized)
+        # why using "next" here?
+        next # to pass some loop of any kind of iterator 跳過某一輪的循環
+      end
+
+      @@dictionary.each do |type, list| #
+        if list.include?(text_element.downcase)
+          categorized = [type, text_element]
+          result.push(categorized)
+          break # jump out from "loop iterator"
         end
-        return results
-      }
+      end
+
+      if (categorized.empty?) #
+        categorized = ['error', text_element]
+        result.push(categorized)
+      end
+
+    end
+
+    return result
+  end
+
+  def self.integer?(object)
+    # remove any trailing zeros so the number
+    # does not get interpreted as hex
+    object.sub!(/^0+/, "") # replace trailing zeros to "nothing"
+
+    begin
+      return Integer(object)
     rescue
-      # errors = words - directions - verbs - nouns
-      # errors.each {|word|
-      #   if word.class != Fixnum
-      #     error_word = ["error", word]
-      #     results.push(error_word)
-      #   end
-      # }
-      return results
+      return false
     end
   end
-end
 
-# Lexicon.scan("north")
+end

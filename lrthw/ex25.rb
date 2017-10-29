@@ -13,7 +13,7 @@ module Ex25
 
   # Prints the first word after shifting it off.
   def Ex25.print_first_word(words)
-    word = words.shift
+    word = words.shift # retrieve and at the same time remove the first item
     puts word
   end
 

@@ -57,7 +57,9 @@ def convert(snippet, phrase)
 
   [snippet, phrase].each do |sentence|
     # fake class names, also copies sentence
-    result = sentence.gsub(/###/) {|x| class_names.pop } # gsub: replace ### with class_names
+    # gsub: replace ### with class_names (.pop = Removes the last
+    # element from self and returns it, or nil if the array is empty.)
+    result = sentence.gsub(/###/) {|x| class_names.pop }
 
     # fake other names
     result.gsub!(/\*\*\*/) {|x| other_names.pop }
