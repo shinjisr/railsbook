@@ -13,6 +13,10 @@ get '/hello/' do
   erb :hello_form
 end
 
+# get '/bear/' do
+# 	erb :bear
+# end
+
 post '/hello/' do
   greeting = params[:greeting] || "Hi There"
   name = params[:name] || "Nobody"
